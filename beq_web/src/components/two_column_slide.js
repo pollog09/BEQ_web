@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TwoColumnSlide = ({ imageSrc, tittle, text }) => {
+const TwoColumnSlide = ({ imageSrc, tittle, text, logo }) => {
     const slideRef = useRef(null);
 
     useEffect(() => {
@@ -26,13 +26,14 @@ const TwoColumnSlide = ({ imageSrc, tittle, text }) => {
     }, []);
 
     return (
-        <div ref={slideRef} className="flex items-center justify-center w-full slide">
+        <div ref={slideRef} className="flex items-center justify-center w-full slide py-8">
             <div className="w-1/2">
-                <img src={imageSrc} alt="Slide" className="w-full h-auto" />
+                <img src={imageSrc} alt="Img" className="w-full h-auto" />
             </div>
-            <div className="w-1/2 p-4">
+            <div className="w-1/2 p-4 flex flex-col justify-center items-center">
                 <h1 className="text-2xl font-bold mb-4">{tittle}</h1>
-                <p>{text}</p>
+                <p className="text-center mb-20">{text}</p>
+                <img src={logo} alt="Logo" className="w-1/2 h-auto" />
             </div>
         </div>
     );

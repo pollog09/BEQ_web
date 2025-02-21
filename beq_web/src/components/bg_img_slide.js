@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-const BgImgSlide = () => {
+const BgImgSlide = (img, text) => {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -9,10 +9,10 @@ const BgImgSlide = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-full bg-cover bg-center" style={{ backgroundImage: "url('path/to/your/image.jpg')" }}>
+    <div className="relative h-screen w-full bg-cover bg-center" style={{ backgroundImage: "url({img})" }}>
       <div className="absolute inset-0 flex items-center justify-center">
         <h1 ref={textRef} className="text-white text-4xl md:text-6xl font-bold">
-          Your Overlaid Text Here
+          {text}
         </h1>
       </div>
     </div>
