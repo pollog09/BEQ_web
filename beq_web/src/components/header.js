@@ -7,7 +7,9 @@ const Header = () => {
   const titleRef = useRef(null);
   const gearRef = useRef(null);
 
+
   useEffect(() => {
+    gsap.set(gearRef.current, { rotation: 0 }); // Set initial rotation to 0
     gsap.fromTo(titleRef.current, { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 });
     gsap.to(gearRef.current, { rotation: 360, repeat: -1, duration: 2, ease: "linear" });
   }, []);

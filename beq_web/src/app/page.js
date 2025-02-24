@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TwoColumnSlide from "../components/two_column_slide.js";
@@ -15,9 +15,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
 
+const [isLoading, setIsLoadig] = useState(false);
+
+useEffect(() => {
+  setIsLoadig(true); 
+}, []);
+
   return (
+    isLoading  ? 
     <div className="min-h-screen flex flex-col justify-between p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-black">
-      <Header />
+      <Header /> 
+
       <main className="flex flex-col gap-8 items-center flex-grow mt-16">
         <FullWidthImage image="whitelogo.png" />
         <TittleSlide tittle="Quienes Somos" />
@@ -30,12 +38,12 @@ export default function Home() {
                                                                               expectativas de nuestros clientes. Nuestro lema,
                                                                               Ingeniería de Calidad, refleja nuestra dedicación a la
                                                                               excelencia en cada proyecto que emprendemos" />
-        <BgImgSlide text="Por que Elegirnos"/>
+        <BgImgSlide text="Por que Elegirnos" />
         <TwoColumnSlide imageSrc="/heater.jpg" tittle="Your tittle here" text="Your text here" />
         <TwoColumnSlide imageSrc="/hidraulic.jpg" tittle="Your tittle here" text="Your text here" />
         {/* You can add more slides here if needed */}
       </main>
       <Footer />
-    </div>
+    </div> : null
   );
 }
