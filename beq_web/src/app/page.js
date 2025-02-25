@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TwoColumnSlide from "../components/two_column_slide.js";
@@ -16,11 +16,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
+  const sectionRefs = useRef([]);
 
   useEffect(() => {
-    setIsLoading(true); 
-  }, []);
+    setIsLoading(true);
 
+    sectionRefs.current.forEach((section, index) => {
+      gsap.fromTo(
+        section,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: true,
+            onEnter: () => gsap.to(section, { opacity: 1, y: 0 }),
+            onLeave: () => gsap.to(section, { opacity: 0, y: 50 }),
+            onEnterBack: () => gsap.to(section, { opacity: 1, y: 0 }),
+            onLeaveBack: () => gsap.to(section, { opacity: 0, y: 50 }),
+          },
+        }
+      );
+    });
+  }, []);
+  
 
   // Slides 1 Stackked
   const slides1 = [
@@ -87,19 +109,13 @@ const slides2 = [
         <TwoColumnSlideInverted imageSrc="/hidraulic.jpg" title1="General:" text1="Ofrecer soluciones innovadoras y eficientes en los
                                                                               sectores residencial, industrial y comercial en los campos de
                                                                               la ingeniería eléctrica, mecánica y civil"
-                                                      title2="Especifos:" text2=" Residencial: Proporcionar servicios personalizados que
-                                                                                  garanticen la seguridad y la eficiencia energética en los
-                                                                                  hogares.
-                                                                                  Comercial: Desarrollar proyectos que optimicen el uso de
-                                                                                  recursos y mejoren la funcionalidad de los espacios
-                                                                                  comerciales.
-                                                                                  Industrial:
-                                                                                  Implementar
-                                                                                  soluciones
-                                                                                  robustas
-                                                                                  y
-                                                                                  sostenibles que impulsen la productividad y el
-                                                                                  crecimiento en las industrias" />
+                                                      title2="Especifos:" text2={
+                                                        <ul>
+                                                          <li>Residencial: Proporcionar servicios personalizados que garanticen la seguridad y la eficiencia energética en los hogares.</li><br />
+                                                          <li>Comercial: Desarrollar proyectos que optimicen el uso de recursos y mejoren la funcionalidad de los espacios comerciales.</li><br />
+                                                          <li>Industrial: Implementar soluciones robustas y sostenibles que impulsen la productividad y el crecimiento en las industrias.</li><br />
+                                                        </ul>
+                                                      } />
         <TwoColumnSlideStacked slides={slides2} titleImageSrc="/power.jpg"/>
         <BgImgSlide 
           img="/tubes.jpg" 

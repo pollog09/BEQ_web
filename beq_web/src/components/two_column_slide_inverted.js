@@ -31,14 +31,14 @@ const TwoColumnSlide = ({ imageSrc, title1, text1, title2, text2 }) => {
             <h2 className="text-xl md:text-2xl font-bold text-center">{title1}</h2>
             <br />
             <br />
-            <p className="text-base md:text-lg text-center">{text1}</p>
+            <div className="text-base md:text-lg text-center">{text1}</div>
             <br />
             <br />
             <br />
             <h2 className="text-xl md:text-2xl font-bold text-center">{title2}</h2>
             <br />
             <br />
-            <p className="text-base md:text-lg text-center">{text2}</p>
+            <div className="text-base md:text-lg text-center">{text2}</div>
           </div>
           <div className="w-full md:w-1/2 mt-4 md:mt-0 md:ml-4">
             <img src={imageSrc} alt="Img" className="w-full h-auto" />
