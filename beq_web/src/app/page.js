@@ -73,7 +73,9 @@ const slides2 = [
 
       <main className="flex flex-col gap-8 items-center flex-grow mt-16">
         <FullWidthImage image="whitelogo.png" />
-        <TittleSlide tittle="Quienes Somos" />
+        <TittleSlide tittle="Quienes Somos" text=" Quality Build Engineering se dedica a ofrecer servicios de construcción excepcionales, guiados
+                                                  por nuestra misión y visión. Estamos comprometidos con la calidad, la innovación y la
+                                                  satisfacción del cliente, lo que nos posiciona como una opción preferida en el mercado." />
         <TwoColumnSlide imageSrc="/metro.jpg" tittle="Presentacion de la Empresa" logo="whitelogo.png" text="En el competitivo mundo de la ingeniería, destacarse requiere no solo experiencia y conocimiento, sino también un compromiso inquebrantable con la calidad. En Quality Build Engineering (QBE), nos enorgullecemos de ofrecer soluciones de ingeniería de alta calidad que superan las expectativas de nuestros clientes." />
         <TittleSlide tittle="Nuestros Servicios" />
         <TwoColumnSlideStacked slides={slides1} title="Beneficios para los clientes"/>
@@ -120,7 +122,28 @@ const slides2 = [
                                                       civil y mecánica, entre otros, abarcando los sectores
                                                       residencial, comercial e industrial" />               
         <TittleSlide tittle="Vision" />
+        <TwoColumnSlide imageSrc="/tubes.jpg" text="Nuestra visión es convertirnos en un referente en el
+                                                      sector de la ingeniería, reconocidos por nuestra
+                                                      excelencia en el diseño y ejecución de proyectos
+                                                      innovadores y sostenibles. Nos esforzamos por
+                                                      establecer relaciones sólidas y duraderas con
+                                                      nuestros clientes, basadas en la confianza y el
+                                                      compromiso con la calidad." />
         <TittleSlide tittle="Areas de Operacion" />
+        <TwoColumnSlide 
+          imageSrc="/plant.jpg" 
+          text={
+            <div>
+              <p>Estamos comprometidos a ofrecer soluciones innovadoras y eficientes en los siguientes sectores:</p>
+              <ul className="list-disc pl-5 ">
+                <li>Residencial: Proporcionamos servicios personalizados que garantizan la seguridad y el confort en el hogar.</li>
+                <li>Comercial: Desarrollamos proyectos que optimizan la funcionalidad y eficiencia de los espacios comerciales.</li>
+                <li>Industrial: Implementamos soluciones robustas y sostenibles que impulsan la productividad y el crecimiento industrial.</li>
+              </ul>
+            </div>
+          }
+        />
+        
         </main> 
       <Footer />
     </div> : null
