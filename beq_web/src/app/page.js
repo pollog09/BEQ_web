@@ -9,6 +9,7 @@ import TittleSlide from '../components/tittle_slide.js';
 import Footer from '../components/footer.js';
 import Header from '../components/header.js';
 import FullWidthImage from '../components/fullw_img.js';
+import TwoColumnSlideStacked from '../components/two_column_slide_stacked.js';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -38,7 +39,10 @@ useEffect(() => {
                                                                               expectativas de nuestros clientes. Nuestro lema,
                                                                               Ingeniería de Calidad, refleja nuestra dedicación a la
                                                                               excelencia en cada proyecto que emprendemos" />
-        <BgImgSlide text="Por que Elegirnos" />
+        <TittleSlide tittle="Nuestros Servicios" />
+        <TwoColumnSlideStacked />
+        <TittleSlide text="Por que Elegirnos" />
+        <BgImgSlide />
         <TwoColumnSlide imageSrc="/heater.jpg" tittle="Your tittle here" text="Your text here" />
         <TwoColumnSlide imageSrc="/hidraulic.jpg" tittle="Your tittle here" text="Your text here" />
         {/* You can add more slides here if needed */}

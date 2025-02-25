@@ -15,7 +15,7 @@ const TittleSlide = ({ tittle, backgroundImage }) => {
   return (
     <div className="relative h-screen w-full bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 ref={titleRef} className="text-white text-5xl md:text-5xl font-bold flex items-center tex-center">
+        <h1 ref={titleRef} className="text-white text-5xl md:text-5xl font-bold flex items-center text-center">
             {tittle}
         </h1>
       </div>
