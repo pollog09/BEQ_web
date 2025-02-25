@@ -32,6 +32,8 @@ const TwoColumnSlide = ({ imageSrc, tittle, text }) => {
             </div>
             <div className="w-full md:w-1/2 mt-4 md:mt-0 md:ml-4">
                 <h2 className="text-xl md:text-2xl font-bold text-center">{tittle}</h2>
+                <br />
+                <br />
                 <p className="text-base md:text-lg text-center">{text}</p>
             </div>
         </div>

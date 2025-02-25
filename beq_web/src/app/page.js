@@ -82,8 +82,22 @@ const slides2 = [
         <TwoColumnSlideInverted imageSrc="/tubes.jpg" title1="Innovación Constante:" text1="En Quality Build Engineering, nos esforzamos por establecer relaciones sólidas y duraderas con nuestros clientes. Nuestro enfoque centrado en el cliente, combinado con nuestra experiencia y conocimiento técnico, nos permite ofrecer soluciones de ingeniería personalizadas que se adaptan a las necesidades específicas de cada cliente." 
                                                       title2="Atención Personalizada:" text2="Nuestro equipo de ingenieros altamente capacitados está constantemente buscando formas innovadoras de abordar los desafíos técnicos más complejos. Nos enorgullece ofrecer soluciones creativas y eficaces que superan las expectativas de nuestros clientes." />
         <TittleSlide tittle="Objetivos" />
-        <TwoColumnSlideInverted imageSrc="/tubes.jpg" title1="Innovación Constante:" text1="En Quality Build Engineering, nos esforzamos por establecer relaciones sólidas y duraderas con nuestros clientes. Nuestro enfoque centrado en el cliente, combinado con nuestra experiencia y conocimiento técnico, nos permite ofrecer soluciones de ingeniería personalizadas que se adaptan a las necesidades específicas de cada cliente."
-                                                      title2="Atención Personalizada:" text2="Nuestro equipo de ingenieros altamente capacitados está constantemente buscando formas innovadoras de abordar los desafíos técnicos más complejos. Nos enorgullece ofrecer soluciones creativas y eficaces que superan las expectativas de nuestros clientes." />
+        <TwoColumnSlideInverted imageSrc="/hidraulic.jpg" title1="General:" text1="Ofrecer soluciones innovadoras y eficientes en los
+                                                                              sectores residencial, industrial y comercial en los campos de
+                                                                              la ingeniería eléctrica, mecánica y civil"
+                                                      title2="Especifos:" text2=" Residencial: Proporcionar servicios personalizados que
+                                                                                  garanticen la seguridad y la eficiencia energética en los
+                                                                                  hogares.
+                                                                                  Comercial: Desarrollar proyectos que optimicen el uso de
+                                                                                  recursos y mejoren la funcionalidad de los espacios
+                                                                                  comerciales.
+                                                                                  Industrial:
+                                                                                  Implementar
+                                                                                  soluciones
+                                                                                  robustas
+                                                                                  y
+                                                                                  sostenibles que impulsen la productividad y el
+                                                                                  crecimiento en las industrias" />
         <TwoColumnSlideStacked slides={slides2} titleImageSrc="/power.jpg"/>
         <BgImgSlide 
           img="/tubes.jpg" 
@@ -98,6 +112,13 @@ const slides2 = [
           }
         />
         <TittleSlide tittle="Mision" />
+        <TwoColumnSlide imageSrc="/tubes.jpg" text=" Nuestra misión es ofrecer un servicio de calidad
+                                                      excepcional, caracterizado por la innovación y la
+                                                      confianza,
+                                                      a todos nuestros clientes. Nos
+                                                      especializamos en proyectos de ingeniería eléctrica,
+                                                      civil y mecánica, entre otros, abarcando los sectores
+                                                      residencial, comercial e industrial" />               
         <TittleSlide tittle="Vision" />
         <TittleSlide tittle="Areas de Operacion" />
         </main> 
