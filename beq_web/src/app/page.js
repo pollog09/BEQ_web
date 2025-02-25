@@ -85,7 +85,22 @@ const slides2 = [
         <TwoColumnSlideInverted imageSrc="/tubes.jpg" title1="Innovación Constante:" text1="En Quality Build Engineering, nos esforzamos por establecer relaciones sólidas y duraderas con nuestros clientes. Nuestro enfoque centrado en el cliente, combinado con nuestra experiencia y conocimiento técnico, nos permite ofrecer soluciones de ingeniería personalizadas que se adaptan a las necesidades específicas de cada cliente."
                                                       title2="Atención Personalizada:" text2="Nuestro equipo de ingenieros altamente capacitados está constantemente buscando formas innovadoras de abordar los desafíos técnicos más complejos. Nos enorgullece ofrecer soluciones creativas y eficaces que superan las expectativas de nuestros clientes." />
         <TwoColumnSlideStacked slides={slides2} titleImageSrc="/power.jpg"/>
-        </main>
+        <BgImgSlide 
+          img="/tubes.jpg" 
+          title="Compromiso con la Excelencia" 
+          text={
+            <ul className="list-disc pl-5 text-left">
+              <li>Cumplimiento de Normas: Nos aseguramos de que todos nuestros proyectos cumplan con los más altos estándares de calidad.</li>
+              <li>Adherencia a los Plazos: Respetamos los plazos establecidos, entregando resultados a tiempo.</li>
+              <li>Gestión de Costos: Mantenemos un control estricto sobre los costos, asegurando que se mantengan dentro del presupuesto acordado.</li>
+              <li>Alcance Definido: Trabajamos dentro de límites y objetivos definidos, garantizando la satisfacción del cliente.</li>
+            </ul>
+          }
+        />
+        <TittleSlide tittle="Mision" />
+        <TittleSlide tittle="Vision" />
+        <TittleSlide tittle="Areas de Operacion" />
+        </main> 
       <Footer />
     </div> : null
   );
