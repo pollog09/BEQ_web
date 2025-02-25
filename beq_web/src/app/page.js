@@ -10,6 +10,7 @@ import Footer from '../components/footer.js';
 import Header from '../components/header.js';
 import FullWidthImage from '../components/fullw_img.js';
 import TwoColumnSlideStacked from '../components/two_column_slide_stacked.js';
+import TwoColumnSlideInverted from "../components/two_column_slide_inverted.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +21,9 @@ export default function Home() {
     setIsLoading(true); 
   }, []);
 
-  const slides = [
+
+  // Slides 1 Stackked
+  const slides1 = [
     {
       imageSrc: "/air.jpg",
       alt: "Ingeniería Mecánica",
@@ -41,6 +44,28 @@ export default function Home() {
     }
   ];
 
+// Slides 2 Stacked
+const slides2 = [
+  {
+    imageSrc: "/metal.jpg",
+    alt: "Soluciones Integrales de Proyectos",
+    title: "Soluciones Integrales de Proyectos",
+    text: "Nos especializamos en ofrecer soluciones completas para proyectos relacionados con instalaciones eléctricas, civiles y mecánicas. Nuestro enfoque abarca desde el diseño hasta la implementación, asegurando que cada etapa del proyecto se ejecute con precisión y eficiencia."
+  },
+  {
+    imageSrc: "/tubes.jpg",
+    alt: "Apoyo en Permisos",
+    title: "Apoyo en Permisos",
+    text: "Brindamos apoyo integral en la gestión de los permisos necesarios para la construcción, remodelación o expansión de infraestructuras. Nuestro equipo se encarga de todos los aspectos burocráticos, facilitando el proceso para que nuestros clientes se enfoquen en sus objetivos principales."
+  },
+  {
+    imageSrc: "/heater.jpg",
+    alt: "Calidad Energética",
+    title: "Calidad Energética",
+    text: "Estamos comprometidos a proporcionar un apoyo excepcional en términos de calidad energética. Evaluamos y optimizamos el uso de energía en cada proyecto, asegurando eficiencia y sostenibilidad en entornos residenciales, comerciales e industriales."
+  }
+];
+
   return (
     isLoading ? 
     <div className="min-h-screen flex flex-col justify-between p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-black">
@@ -51,12 +76,16 @@ export default function Home() {
         <TittleSlide tittle="Quienes Somos" />
         <TwoColumnSlide imageSrc="/metro.jpg" tittle="Presentacion de la Empresa" logo="whitelogo.png" text="En el competitivo mundo de la ingeniería, destacarse requiere no solo experiencia y conocimiento, sino también un compromiso inquebrantable con la calidad. En Quality Build Engineering (QBE), nos enorgullecemos de ofrecer soluciones de ingeniería de alta calidad que superan las expectativas de nuestros clientes." />
         <TittleSlide tittle="Nuestros Servicios" />
-        <TwoColumnSlideStacked slides={slides} />
+        <TwoColumnSlideStacked slides={slides1} title="Beneficios para los clientes"/>
         <TittleSlide tittle="Por que Elegirnos" />
         <BgImgSlide img="/hose.jpg" text="En Quality Build Engineering, nos esforzamos por establecer relaciones sólidas y duraderas con nuestros clientes. Nuestro enfoque centrado en el cliente, combinado con nuestra experiencia y conocimiento técnico, nos permite ofrecer soluciones de ingeniería personalizadas que se adaptan a las necesidades específicas de cada cliente." title="Compromiso con la Calidad" />
+        <TwoColumnSlideInverted imageSrc="/tubes.jpg" title1="Innovación Constante:" text1="En Quality Build Engineering, nos esforzamos por establecer relaciones sólidas y duraderas con nuestros clientes. Nuestro enfoque centrado en el cliente, combinado con nuestra experiencia y conocimiento técnico, nos permite ofrecer soluciones de ingeniería personalizadas que se adaptan a las necesidades específicas de cada cliente." 
+                                                      title2="Atención Personalizada:" text2="Nuestro equipo de ingenieros altamente capacitados está constantemente buscando formas innovadoras de abordar los desafíos técnicos más complejos. Nos enorgullece ofrecer soluciones creativas y eficaces que superan las expectativas de nuestros clientes." />
         <TittleSlide tittle="Objetivos" />
-        {/* You can add more slides here if needed */}
-      </main>
+        <TwoColumnSlideInverted imageSrc="/tubes.jpg" title1="Innovación Constante:" text1="En Quality Build Engineering, nos esforzamos por establecer relaciones sólidas y duraderas con nuestros clientes. Nuestro enfoque centrado en el cliente, combinado con nuestra experiencia y conocimiento técnico, nos permite ofrecer soluciones de ingeniería personalizadas que se adaptan a las necesidades específicas de cada cliente."
+                                                      title2="Atención Personalizada:" text2="Nuestro equipo de ingenieros altamente capacitados está constantemente buscando formas innovadoras de abordar los desafíos técnicos más complejos. Nos enorgullece ofrecer soluciones creativas y eficaces que superan las expectativas de nuestros clientes." />
+        <TwoColumnSlideStacked slides={slides2} titleImageSrc="/power.jpg"/>
+        </main>
       <Footer />
     </div> : null
   );
