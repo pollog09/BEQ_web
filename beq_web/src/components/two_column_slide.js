@@ -26,14 +26,13 @@ const TwoColumnSlide = ({ imageSrc, tittle, text, logo }) => {
     }, []);
 
     return (
-        <div ref={slideRef} className="flex items-center justify-center w-full slide py-8">
-            <div className="w-1/2">
+        <div ref={slideRef} className="flex flex-col md:flex-row items-center justify-center w-full slide py-8">
+            <div className="w-full md:w-1/2 mb-4 md:mb-0">
                 <img src={imageSrc} alt="Img" className="w-full h-auto" />
             </div>
-            <div className="w-1/2 p-4 flex flex-col justify-center items-center">
-                <h1 className="text-2xl font-bold mb-4">{tittle}</h1>
-                <p className="text-center mb-20">{text}</p>
-                <img src={logo} alt="Logo" className="w-1/2 h-auto" />
+            <div className="w-full md:w-1/2">
+                <h2 className="text-xl md:text-2xl font-bold text-center">{tittle}</h2>
+                <p className="text-base md:text-lg text-center">{text}</p>
             </div>
         </div>
     );
