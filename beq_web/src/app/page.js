@@ -150,7 +150,9 @@ const slides2 = [
             </div>
           }
         />
-        <TittleSlide tittle="Casos de Estudio" 
+        <BgImgSlide 
+        img="/electric.jpg"
+        title="Casos de Estudio" 
         text={
           <div className="text-left">
             <ul className="list-disc pl-5">
