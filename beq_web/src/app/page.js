@@ -137,7 +137,7 @@ const slides2 = [
             <div className="text-left">
               <ul className="list-disc pl-5 ">
               <li>Residencial: Proporcionamos servicios personalizados que garantizan la seguridad y el confort en el hogar.</li>
-                <li>Comercial: Desarrollamos proyectos que optimizan la funcionalidad y eficiencia de los espacios comerciales.</li>
+              <li>Comercial: Desarrollamos proyectos que optimizan la funcionalidad y eficiencia de los espacios comerciales.</li>
                 <li>Industrial: Implementamos soluciones robustas y sostenibles que impulsan la productividad y el crecimiento industrial.</li>
                 <li>Instalaciones Eléctricas Industriales: Diseño e instalación de sistemas eléctricos en plantas industriales, incluyendo cableado, paneles de control y distribución de energía.</li>
                 <li>Remodelación Eléctrica Industrial: Actualización y optimización de sistemas eléctricos existentes en instalaciones industriales para mejorar la eficiencia y la seguridad.</li>
@@ -164,7 +164,7 @@ const slides2 = [
           </div>
         }
         />
-        </main> 
+        </main>
       <Footer />
     </div> : null
   );

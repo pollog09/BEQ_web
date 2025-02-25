@@ -21,7 +21,7 @@ const TwoColumnSlideStacked = ({ slides, title, titleImageSrc }) => {
             </div>
             <div className="text-center md:text-left">
               <h3 className="text-xl font-semibold text-white">{slide.title}</h3>
-              <p className="text-white text-sm">{slide.text}</p>
+              <div className="text-white text-sm">{slide.text}</div>
             </div>
           </div>
         ))}
