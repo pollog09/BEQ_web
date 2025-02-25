@@ -138,7 +138,7 @@ const slides2 = [
                                                       civil y mecánica, entre otros, abarcando los sectores
                                                       residencial, comercial e industrial" />               
         <TittleSlide tittle="Vision" />
-        <TwoColumnSlide imageSrc="/tubes.jpg" text="Nuestra visión es convertirnos en un referente en el
+        <TwoColumnSlide imageSrc="/metro.jpg" text="Nuestra visión es convertirnos en un referente en el
                                                       sector de la ingeniería, reconocidos por nuestra
                                                       excelencia en el diseño y ejecución de proyectos
                                                       innovadores y sostenibles. Nos esforzamos por
