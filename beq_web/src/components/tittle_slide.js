@@ -18,6 +18,8 @@ const TittleSlide = ({ tittle, text }) => {
         <h1 ref={titleRef} className="text-white text-5xl md:text-5xl font-bold flex items-center text-center">
           {tittle}
         </h1>
+        <br />
+        <br />
         <p className="text-white text-2xl md:text-2xl text-center">{text}</p>
       </div>
     </div>

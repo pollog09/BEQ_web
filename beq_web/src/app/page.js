@@ -132,18 +132,36 @@ const slides2 = [
         <TittleSlide tittle="Areas de Operacion" />
         <TwoColumnSlide 
           imageSrc="/plant.jpg" 
+          tittle="Estamos comprometidos a ofrecer soluciones innovadoras y eficientes en los siguientes sectores:"
           text={
-            <div>
-              <p>Estamos comprometidos a ofrecer soluciones innovadoras y eficientes en los siguientes sectores:</p>
+            <div className="text-left">
               <ul className="list-disc pl-5 ">
-                <li>Residencial: Proporcionamos servicios personalizados que garantizan la seguridad y el confort en el hogar.</li>
+              <li>Residencial: Proporcionamos servicios personalizados que garantizan la seguridad y el confort en el hogar.</li>
                 <li>Comercial: Desarrollamos proyectos que optimizan la funcionalidad y eficiencia de los espacios comerciales.</li>
                 <li>Industrial: Implementamos soluciones robustas y sostenibles que impulsan la productividad y el crecimiento industrial.</li>
+                <li>Instalaciones Eléctricas Industriales: Diseño e instalación de sistemas eléctricos en plantas industriales, incluyendo cableado, paneles de control y distribución de energía.</li>
+                <li>Remodelación Eléctrica Industrial: Actualización y optimización de sistemas eléctricos existentes en instalaciones industriales para mejorar la eficiencia y la seguridad.</li>
+                <li>Calidad y Eficiencia Energética: Implementación de tecnologías y prácticas para reducir el consumo de energía y mejorar la eficiencia de los sistemas eléctricos, incluyendo el uso de fuentes de energía renovable.</li>
+                <li>Auditorías Eléctricas: Evaluación y análisis de sistemas eléctricos para identificar áreas de mejora, reducir el desperdicio de energía y asegurar el cumplimiento de regulaciones y estándares.</li>
+                <li>Mantenimiento de Transformadores y Subestaciones: Inspección, reparación y mantenimiento preventivo de transformadores y subestaciones para asegurar su operación óptima y prolongar su vida útil.</li>
+                <li>Optimización Energética: Desarrollo e implementación de soluciones para maximizar el uso eficiente de la energía, incluyendo la instalación de equipos de monitoreo y control de energía.</li>
+                <li>Servicios de Calidad: Enfoque constante en la calidad de los servicios prestados, asegurando que se cumplan los más altos estándares y satisfaciendo las necesidades y expectativas de los clientes.</li>
               </ul>
             </div>
           }
         />
-        
+        <TittleSlide tittle="Casos de Estudio" 
+        text={
+          <div className="text-left">
+            <ul className="list-disc pl-5">
+              <li>Remodelación eléctrica en la planta industrial de Cadence, Coyol, Alajuela. Septiembre 2024</li>
+              <li>Mantenimiento del transformador pedestal principal en Teradyne 2025</li>
+              <li>Auditoría de calidad energética en DICOMA 2024</li>
+              <li>Auditoría eléctrica en CADENCE 2024</li>
+            </ul>
+          </div>
+        }
+        />
         </main> 
       <Footer />
     </div> : null
