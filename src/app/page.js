@@ -99,13 +99,19 @@ const slides2 = [
                                                   por nuestra misión y visión. Estamos comprometidos con la calidad, la innovación y la
                                                   satisfacción del cliente, lo que nos posiciona como una opción preferida en el mercado." />
         <TwoColumnSlide imageSrc="/metro.jpg" tittle="Presentacion de la Empresa" logo="whitelogo.png" text="En el competitivo mundo de la ingeniería, destacarse requiere no solo experiencia y conocimiento, sino también un compromiso inquebrantable con la calidad. En Quality Build Engineering (QBE), nos enorgullecemos de ofrecer soluciones de ingeniería de alta calidad que superan las expectativas de nuestros clientes." />
+        <section id="nuestros-servicios">
         <TittleSlide tittle="Nuestros Servicios" />
+        </section>
         <TwoColumnSlideStacked slides={slides1} title="Beneficios para los clientes"/>
+        <section id="por-que-elegirnos"> 
         <TittleSlide tittle="Por que Elegirnos" />
+        </section>
         <BgImgSlide img="/hose.jpg" text="En Quality Build Engineering, nos esforzamos por establecer relaciones sólidas y duraderas con nuestros clientes. Nuestro enfoque centrado en el cliente, combinado con nuestra experiencia y conocimiento técnico, nos permite ofrecer soluciones de ingeniería personalizadas que se adaptan a las necesidades específicas de cada cliente." title="Compromiso con la Calidad" />
         <TwoColumnSlideInverted imageSrc="/tubes.jpg" title1="Innovación Constante:" text1="En Quality Build Engineering, nos esforzamos por establecer relaciones sólidas y duraderas con nuestros clientes. Nuestro enfoque centrado en el cliente, combinado con nuestra experiencia y conocimiento técnico, nos permite ofrecer soluciones de ingeniería personalizadas que se adaptan a las necesidades específicas de cada cliente." 
                                                       title2="Atención Personalizada:" text2="Nuestro equipo de ingenieros altamente capacitados está constantemente buscando formas innovadoras de abordar los desafíos técnicos más complejos. Nos enorgullece ofrecer soluciones creativas y eficaces que superan las expectativas de nuestros clientes." />
+        <section id="objetivos"> 
         <TittleSlide tittle="Objetivos" />
+        </section>
         <TwoColumnSlideInverted imageSrc="/hidraulic.jpg" title1="General:" text1="Ofrecer soluciones innovadoras y eficientes en los
                                                                               sectores residencial, industrial y comercial en los campos de
                                                                               la ingeniería eléctrica, mecánica y civil"
@@ -129,7 +135,9 @@ const slides2 = [
             </ul>
           }
         />
+        <section id="mision"> 
         <TittleSlide tittle="Mision" />
+        </section>
         <TwoColumnSlide imageSrc="/tubes.jpg" text=" Nuestra misión es ofrecer un servicio de calidad
                                                       excepcional, caracterizado por la innovación y la
                                                       confianza,
@@ -137,7 +145,9 @@ const slides2 = [
                                                       especializamos en proyectos de ingeniería eléctrica,
                                                       civil y mecánica, entre otros, abarcando los sectores
                                                       residencial, comercial e industrial" />               
+         <section id="vision"> 
         <TittleSlide tittle="Vision" />
+        </section>
         <TwoColumnSlide imageSrc="/metro.jpg" text="Nuestra visión es convertirnos en un referente en el
                                                       sector de la ingeniería, reconocidos por nuestra
                                                       excelencia en el diseño y ejecución de proyectos
@@ -145,7 +155,9 @@ const slides2 = [
                                                       establecer relaciones sólidas y duraderas con
                                                       nuestros clientes, basadas en la confianza y el
                                                       compromiso con la calidad." />
+         <section id="areas-operacion"> 
         <TittleSlide tittle="Areas de Operacion" />
+        </section>
         <TwoColumnSlide 
           imageSrc="/plant.jpg" 
           tittle="Estamos comprometidos a ofrecer soluciones innovadoras y eficientes en los siguientes sectores:"
