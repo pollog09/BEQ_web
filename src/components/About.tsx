@@ -83,7 +83,19 @@ const About: React.FC = () => {
 
           {/* Company Presentation */}
           <div className="mb-16 animate-slide-left">
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+            <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden group">
+              {/* Background image */}
+              <div className="absolute inset-0 z-0">
+                <img 
+                  src="/air.jpg"
+                  alt="Industrial systems background"
+                  className="w-full h-full object-cover opacity-10 group-hover:opacity-15 transition-opacity duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-slate-900/85" />
+              </div>
+              
+              {/* Content */}
+              <div className="relative z-10">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Presentación de la Empresa</h3>
               <p className="text-gray-300 leading-relaxed">
                 En el competitivo mundo de la ingeniería, destacarse requiere no solo experiencia y conocimiento, 
@@ -91,6 +103,7 @@ const About: React.FC = () => {
                 nos enorgullecemos de ofrecer soluciones de ingeniería de alta calidad que superan las expectativas 
                 de nuestros clientes.
               </p>
+              </div>
             </div>
           </div>
 
@@ -175,8 +188,20 @@ const About: React.FC = () => {
               {whyChooseUs.map((item, index) => (
                 <div 
                   key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+                  className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden group"
                 >
+                  {/* Background image for all items */}
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src="/air.jpg"
+                      alt="Industrial systems background"
+                      className="w-full h-full object-cover opacity-8 group-hover:opacity-12 transition-opacity duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-slate-800/75 to-slate-900/90" />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
                   <div className="flex items-start space-x-6">
                     <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex-shrink-0">
                       <item.icon className="h-8 w-8 text-white" />
@@ -185,6 +210,7 @@ const About: React.FC = () => {
                       <h4 className="text-2xl font-bold text-cyan-400 mb-4">{item.title}</h4>
                       <p className="text-gray-300 leading-relaxed">{item.description}</p>
                     </div>
+                  </div>
                   </div>
                 </div>
               ))}

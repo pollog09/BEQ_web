@@ -167,7 +167,19 @@ const Services: React.FC = () => {
                 className="group cursor-pointer animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 h-full hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+                <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 h-full hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden">
+                  {/* Background image */}
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src={index === 0 ? '/metal.jpg' : index === 1 ? '/electric.jpg' : '/tubes.jpg'}
+                      alt={`${service.title} background`}
+                      className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-800/60 to-slate-900/50" />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
@@ -187,6 +199,7 @@ const Services: React.FC = () => {
                         <span className="text-gray-400 text-sm">{feature}</span>
                       </div>
                     ))}
+                  </div>
                   </div>
                 </div>
               </div>
@@ -242,8 +255,27 @@ const Services: React.FC = () => {
               {specializedServices.map((service, index) => (
                 <div 
                   key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+                  className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden group"
                 >
+                  {/* Background image */}
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src={
+                        index === 0 ? '/power.jpg' :
+                        index === 1 ? '/riel.jpg' :
+                        index === 2 ? '/heater.jpg' :
+                        index === 3 ? '/metro.jpg' :
+                        index === 4 ? '/hidraulic.jpg' :
+                        '/hose.jpg'
+                      }
+                      alt={`${service.title} background`}
+                      className="w-full h-full object-cover opacity-25 group-hover:opacity-35 transition-opacity duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900/75 via-slate-800/65 to-slate-900/80" />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="relative z-10">
                   <div className="flex items-start space-x-4">
                     <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex-shrink-0">
                       <service.icon className="h-6 w-6 text-white" />
@@ -252,6 +284,7 @@ const Services: React.FC = () => {
                       <h4 className="text-lg font-bold text-cyan-400 mb-3">{service.title}</h4>
                       <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                     </div>
+                  </div>
                   </div>
                 </div>
               ))}

@@ -10,16 +10,34 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-0">
+      {/* Plant background image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/plant.jpg" 
+          alt="Industrial Plant" 
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay to maintain readability */}
+        <div className="absolute inset-0 bg-slate-900/60" />
+        {/* Gradient overlay for better text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/40 to-slate-900/25" />
+      </div>
+      
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 animate-gradient-shift" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/30 via-blue-900/20 to-purple-900/30 animate-gradient-shift z-10" />
       
       {/* Floating elements */}
-      <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full animate-float opacity-60" />
-      <div className="absolute top-40 right-20 w-6 h-6 bg-blue-400 rounded-full animate-float-delayed opacity-40" />
-      <div className="absolute bottom-32 left-20 w-3 h-3 bg-yellow-400 rounded-full animate-float-slow opacity-50" />
+      <div className="absolute top-20 left-10 w-4 h-4 bg-cyan-400 rounded-full animate-float opacity-60 z-20" />
+      <div className="absolute top-40 right-20 w-6 h-6 bg-blue-400 rounded-full animate-float-delayed opacity-40 z-20" />
+      <div className="absolute bottom-32 left-20 w-3 h-3 bg-yellow-400 rounded-full animate-float-slow opacity-50 z-20" />
       
-      <div className="container mx-auto px-4 z-10">
+      {/* Geometric shapes */}
+      <div className="absolute top-20 left-20 w-16 h-16 border border-cyan-400/20 rotate-45 animate-spin-slow z-20" />
+      <div className="absolute bottom-20 right-20 w-12 h-12 border border-blue-400/20 animate-pulse z-20" />
+      <div className="absolute top-1/2 left-10 w-8 h-8 bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-full animate-bounce-slow z-20" />
+      
+      <div className="container mx-auto px-4 z-30 relative">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main heading with staggered animation */}
           <div className="space-y-6 mb-8">
