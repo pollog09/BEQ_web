@@ -72,8 +72,8 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       label: 'Teléfono',
-      value: '+506 8888-8888',
-      href: 'tel:+50688888888'
+      value: '+506 6035-2863',
+      href: 'tel:+50660352863'
     },
     {
       icon: Mail,
@@ -246,7 +246,7 @@ const Contact: React.FC = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 text-white placeholder-gray-400"
-                          placeholder="+506 8888-8888"
+                          placeholder="+506 6035-2863"
                         />
                       </div>
                     </div>

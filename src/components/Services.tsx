@@ -291,27 +291,7 @@ const Services: React.FC = () => {
             </div>
           </div>
 
-          {/* Case Studies */}
-          <div className="mb-16">
-            <h3 className="text-3xl font-bold text-center text-cyan-400 mb-12">Casos de Estudio</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                <div 
-                  key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
-                >
-                  <div className="flex justify-between items-start mb-4">
-                    <h4 className="text-xl font-bold text-cyan-400">{study.title}</h4>
-                    <span className="text-xs bg-cyan-400/20 text-cyan-400 px-2 py-1 rounded-full">
-                      {study.type}
-                    </span>
-                  </div>
-                  <p className="text-gray-300 mb-3">{study.description}</p>
-                  <p className="text-gray-400 text-sm">{study.date}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+ 
 
           {/* Call to Action */}
           <div className="text-center animate-fade-in">
