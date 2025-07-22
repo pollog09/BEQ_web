@@ -86,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
         <div className={`md:hidden transition-all duration-300 ${
           isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
         } overflow-hidden`}>
-          <div className="pt-4 pb-2 space-y-2">
+          <div className="pt-4 pb-2 space-y-2 bg-slate-900/95 backdrop-blur-sm border-t border-slate-700/50 rounded-b-lg">
             {navItems.map((item) => (
               <button
                 key={item.id}
